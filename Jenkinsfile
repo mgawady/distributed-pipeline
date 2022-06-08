@@ -7,17 +7,17 @@ pipeline {
 
     stages {
         stage('Build') {
-            checkout scm
             agent { node { label 'slave01' } }
             steps{
+            checkout scm
             sh "mvn clean install -DskipTests"
             }
         }
 
         stage('test') {
-            checkout scm
             agent { node { label 'slave02' } }
             steps{
+            checkout scm
             sh "mvn test"
             }
         }
