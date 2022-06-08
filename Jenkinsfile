@@ -1,4 +1,4 @@
-node('Built-in node'){
+node(){
 
     stage('Build'){
         sh "mvn clean install"
