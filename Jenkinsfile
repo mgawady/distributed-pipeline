@@ -6,7 +6,7 @@ node(){
 
 }
 
-node('slave01')
+node('slave01'){
     stage('Build'){
         sh "mvn clean install"
     }
