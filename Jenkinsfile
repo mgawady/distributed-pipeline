@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent { node { label 'slave01' } }
+            agent { node { label 'slave03' } }
             steps{
             checkout scm
             sh "mvn clean install -DskipTests"
